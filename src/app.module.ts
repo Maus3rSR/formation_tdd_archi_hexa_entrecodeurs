@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
 
+import { LadderModule } from './ladder/ladder.module';
+
 @Module({
-  imports: [],
+  imports: [LadderModule],
   controllers: [],
   providers: [],
 })
