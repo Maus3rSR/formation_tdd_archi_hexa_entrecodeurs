@@ -38,8 +38,8 @@ class ComputeEloCommandHandler {
   constructor(private playerEloRepository: PlayerEloRepository) {}
 
   async execute(): Promise<void> {
-    const oldElo = await playerEloRepository.getPlayerElo('player1');
+    const oldElo = await this.playerEloRepository.getPlayerElo('player1');
     const newElo = oldElo + 10;
-    return playerEloRepository.updatePlayerElo('player1', newElo);
+    return this.playerEloRepository.updatePlayerElo('player1', newElo);
   }
 }
